@@ -1,0 +1,44 @@
+@model mvc_lab.Models.Estudiante
+
+@{
+    ViewData["Title"] = "Estudiante";
+}
+
+<div class="row">  
+    <div class="col-md-4">
+        <h1 class="display-4">Estudiante</h1>
+        <form asp-controller="Estudiante" asp-action="Almacenar">
+            <div asp-asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" name="name"/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Last_name" class="control-label"></label>
+                <input asp-for="Last_name" class="form-control" name="last_name"/>
+                <span asp-validation-for="Last_name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Subject" class="control-label"></label>
+                <select class="form-control" asp-for="Subject" name="subject">
+                    <option value="Matematica">Matematica</option>
+                    <option value="Historia">Historia</option>
+                    <option value="Lenguaje">Lenguaje</option>
+                    <option value="Geografia">Geografia</option>
+                </select>
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Almacenar"/>
+            </div>
+        </form>
+
+        <td>@Html.DisplayTextFor(Model=> Model.Answer)</td>
+
+    </div>
+
+</div>
