@@ -9,9 +9,9 @@ namespace mvc_lab.Data{
 
         public DatabaseContext(DbContextOptions<DatabaseContext> options)
             : base(options)
-        {
-        }
+        { }
 
         public DbSet<mvc_lab.Models.Contacto> Contactos { get; set; }
+        public DbSet<mvc_lab.Models.Covid> Covid { get; set; }
     }
 }
