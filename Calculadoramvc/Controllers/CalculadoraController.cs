@@ -36,7 +36,7 @@ namespace MVC_Lab.Controllers
          if("+".Equals(objCalculadora.Accion)){
             objCalculadora.Respuesta = objCalculadora.Operador1 = objCalculadora.Operador2;
          }
-         return View(objCalculadora);
+         return View("index", objCalculadora);
 
         }
 
