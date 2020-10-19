@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
+
 namespace Calculadoramvc.Models
 {
     public class Calculadora
